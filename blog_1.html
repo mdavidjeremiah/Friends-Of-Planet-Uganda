@@ -1,0 +1,264 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Insights &amp; Dispatch | Friends of Planet Uganda</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="js/tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="font-body-md text-on-surface selection:bg-secondary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-primary/80 dark:bg-primary/90 backdrop-blur-md shadow-sm border-b border-outline-variant/10">
+  <div class="flex items-center">
+    <a class="font-display-lg-mobile text-headline-sm text-on-primary dark:text-primary-fixed font-normal tracking-tight" href="index.html">Friends of Planet Uganda</a>
+  </div>
+  <nav class="hidden md:flex space-x-8 items-center">
+    <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="our_work.html">Our Work</a>
+    <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="about_us.html">About Us</a>
+    <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="get_involved.html">Get Involved</a>
+    <a class="font-label-caps text-label-caps text-on-primary border-b-2 border-secondary-fixed transition-opacity" href="blog.html">Blog</a>
+  </nav>
+  <div class="flex items-center gap-4">
+    <button class="hidden sm:block font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity uppercase tracking-widest">Volunteer</button>
+    <button class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 font-label-caps text-label-caps hover:opacity-80 transition-opacity rounded-lg uppercase tracking-widest">Donate</button>
+  </div>
+</header>
+<main class="pt-24">
+<!-- Hero Section: Featured Article -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="relative w-full aspect-[21/9] min-h-[500px] overflow-hidden group cursor-pointer shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" data-alt="A panoramic, high-resolution editorial photograph of the lush, misty Bwindi Impenetrable Forest in Uganda. In the foreground, a dense canopy of ancient trees is illuminated by soft, morning golden light piercing through the fog. The mood is heroic and serene, capturing the breathtaking scale and biodiversity of the Ugandan landscape. The color palette is dominated by deep forest greens and soft white mists, creating a sense of luxury and quiet confidence." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAhcEyIRNpsv9OrdNOYGYoQV__cXncLvar6rfhubIECVmbujYwP7QALAqSJPnstG5UHZ1mDZg-KRT4bUPq78I7UIVvFRV3FnZfuTL8DCJmcX2DfU12aDt8wZ8Lj1zsAzOP14uoKj37dQKJ3H4ER_yev55z5JmnCxFu9KByLckCJnbg6BJ1KfQQxa-sOv07LQJuHhePFo0IZpK-XzNCondhG7DDauXUeo_EPZZLcMWtd0YRIluNuh0c')"></div>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute inset-0 flex flex-col justify-end p-8 md:p-16 max-w-4xl">
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps mb-4 rounded-sm">Featured Story</span>
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-on-primary mb-6 text-balance leading-tight">New Protected Corridor Established: A Victory for the Great Migrations</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-8 max-w-2xl line-clamp-3">A landmark agreement with local community leaders has successfully secured a 500-hectare wildlife corridor, ensuring safe passage for Uganda's elephants and primates between key ecological zones.</p>
+<div class="flex items-center gap-4">
+<button class="bg-on-primary text-primary px-8 py-3 font-label-caps text-label-caps flex items-center gap-2 hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors">
+              READ FULL REPORT
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<span class="font-label-caps text-label-caps text-on-primary/60">Oct 14, 2024 • 8 MIN READ</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Filter Bar -->
+<section class="px-margin-mobile md:px-margin-desktop mb-12 flex flex-wrap gap-4 items-center justify-between border-b border-outline-variant/30 pb-8">
+<div class="flex flex-wrap gap-4">
+<button class="px-6 py-2 bg-primary text-on-primary font-label-caps text-label-caps rounded-full shadow-sm">All Dispatches</button>
+<button class="px-6 py-2 bg-surface-container hover:bg-tertiary-fixed-dim transition-colors font-label-caps text-label-caps rounded-full text-on-surface-variant transition-all duration-700 opacity-100 translate-y-0">Wildlife</button>
+<button class="px-6 py-2 bg-surface-container hover:bg-tertiary-fixed-dim transition-colors font-label-caps text-label-caps rounded-full text-on-surface-variant transition-all duration-700 opacity-100 translate-y-0">Community</button>
+<button class="px-6 py-2 bg-surface-container hover:bg-tertiary-fixed-dim transition-colors font-label-caps text-label-caps rounded-full text-on-surface-variant transition-all duration-700 opacity-100 translate-y-0">Reforestation</button>
+<button class="px-6 py-2 bg-surface-container hover:bg-tertiary-fixed-dim transition-colors font-label-caps text-label-caps rounded-full text-on-surface-variant transition-all duration-700 opacity-100 translate-y-0">Policy</button>
+</div>
+<div class="relative group">
+<input class="bg-transparent border-b border-outline focus:border-primary focus:ring-0 font-label-caps text-label-caps py-2 pl-2 pr-8 w-64 placeholder:text-outline-variant" placeholder="Search archive..." type="text">
+<span class="material-symbols-outlined absolute right-0 top-2 text-outline">search</span>
+</div>
+</section>
+<!-- Content Grid -->
+<section class="px-margin-mobile md:px-margin-desktop grid grid-cols-12 gap-gutter mb-section-gap">
+<!-- Primary Feed -->
+<div class="col-span-12 lg:col-span-8 space-y-16">
+<!-- Editorial Article 1 -->
+<article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center group transition-all duration-700 opacity-100 translate-y-0">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A dignified portrait of a Black Ugandan forest ranger in professional olive-green uniform, standing amidst sun-dappled foliage. The lighting is soft and natural, emphasizing the texture of the uniform and the serene, authoritative expression on the ranger's face. The composition is heroic yet authentic, following a high-end photojournalistic style that conveys deep commitment to conservation and local leadership." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIi3_hVsyehVKEFGz4TxJKx8W8ztdvxHtv9SBVAgsEUpXevm23JqwlGEotXvsKNEgjp9n6n-Hx3RMWCDTT_i0tlBtGSfwtv59CNEVxCpDac92YQR5jrSzu-wm5kAqDLQeLAd31J6hEyv8sSiW9KCS3DwWrlhf3UZWN_yntPZ0YbBgt0yKWwWXcm8cAQ1llNSj6QqhTTAJfzwdLRxE3kkcD-klIrscyvYrHfInoFhJTitiECIpfYMo">
+</div>
+<div>
+<div class="flex gap-3 mb-4">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.2em] uppercase">Wildlife</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-caps text-[10px] text-outline tracking-[0.2em] uppercase">Oct 10, 2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4 leading-tight hover:text-secondary transition-colors cursor-pointer">Guardian of the Mist: A Day in the Life of a Silverback Ranger</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Deep within the Bwindi Impenetrable Forest, our rangers are using tactile heritage and modern technology to protect the remaining mountain gorilla families from encroaching threats.</p>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-all" href="blog.html">READ MORE</a>
+</div>
+</article>
+<!-- Editorial Article 2 -->
+<article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center group transition-all duration-700 opacity-100 translate-y-0">
+<div class="aspect-[4/3] overflow-hidden md:order-last">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="An aerial shot of a vibrant reforestation project in Uganda where thousands of new saplings are being planted in an organized, artistic grid pattern against the rich red Ugandan soil. Small groups of community members are seen working together under the soft, golden light of late afternoon. The scene is lush and hopeful, with a palette of vibrant greens and earthy tans that highlight the serene atmosphere of restoration." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUK5TwycNgpmJFaDCLu14srYsIn4fC3xnB65G3JF4atd8sI-uqbZzoVssfOFuYHjefGUSq-LhwY5tjjrnEQxmc185h35ZMkW1HOiPaH1f0QvZ_-FXH4vy2gQH1og4DyumPBNWjoLoqw94Mz4UW-d5aAQd_L65kYLVyi_9hqLaXaLMuZX2GdU8tkZQBy33aYF5suuCBGb_R_ObUyGue87ITdC9xNe0adsmksdljh062QUyGtRHsAqU">
+</div>
+<div>
+<div class="flex gap-3 mb-4">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.2em] uppercase">Reforestation</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-caps text-[10px] text-outline tracking-[0.2em] uppercase">Oct 05, 2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4 leading-tight hover:text-secondary transition-colors cursor-pointer">One Million Saplings: Healing the Soil for Generations</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">Our community-led reforestation initiative has reached a historic milestone, with over one million native species planted in former logging zones across the western region.</p>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-all" href="blog.html">READ MORE</a>
+</div>
+</article>
+<!-- Editorial Article 3 -->
+<article class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center group transition-all duration-700 opacity-100 translate-y-0">
+<div class="aspect-[4/3] overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A group of Black Ugandan community leaders, men and women, gathered around a large wooden table in an open-air pavilion. They are engaged in a thoughtful, composed discussion with maps and documents laid out before them. The lighting is warm and natural, casting soft shadows and highlighting the dignified, focused expressions. The scene is professional and serene, emphasizing the authoritative role of local leaders in environmental policy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMrAC8wKKDDrSIwVZhhx3rqlLtOjhKFJ-e2ZWp5BS8w7pT3d-olaPYv0s1wcH-fQLcRejY6AiymNwuMc_0hel12rVJjSnBXX6dl-ow3RsVG2-gksA2E0Ob38yz0Rhm_g81onnG4zuIC8_OtQz2ZBFGI9SbnYPkfQZIJ7LlAXmx9iNWGnZnjqulk8pKpXrjZFDPFLMmHlBt8qjNl2xfnnwaMBoHgHsxpjVRpqErGZcbX5nu6DD3sSY">
+</div>
+<div>
+<div class="flex gap-3 mb-4">
+<span class="font-label-caps text-[10px] text-secondary tracking-[0.2em] uppercase">Policy</span>
+<span class="text-outline-variant">•</span>
+<span class="font-label-caps text-[10px] text-outline tracking-[0.2em] uppercase">Sep 28, 2024</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-4 leading-tight hover:text-secondary transition-colors cursor-pointer">Sovereignty &amp; Stewardship: Localizing Conservation Law</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-3">We explore how shifting legal oversight to indigenous community councils is creating more resilient and sustainable environmental outcomes for Uganda's northern regions.</p>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-secondary hover:border-secondary transition-all" href="blog.html">READ MORE</a>
+</div>
+</article>
+</div>
+<!-- Sidebar -->
+<aside class="col-span-12 lg:col-span-4 space-y-12">
+<!-- Newsletter Box -->
+<div class="relative overflow-hidden p-8 shadow-sm group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCCkNB7bDEWtv24Mgb-LBsWDyGKtt3ugYsJQIApfDCaeouoVKi5nygVXtJ1spAJJxJDWIstUND5bTvU1zpOlxPDpWrdlkb39O-_dIfsFqOASpdFBtDhGT-TpCZWd_zqwQo5We_H-cVDyHeE1BVjUiHiA-MQQMyFHqg5S0VwTVAXrecl69zsjx5C5d-q4m2_fG14aVH2ZOa7uhRNy6UY-pH0dABS-Y67ugeiAevuLFSRUI7uK740udQvPcS-YXDSuIlv')"></div>
+<div class="absolute inset-0 bg-primary/80 backdrop-blur-sm"></div>
+<div class="relative z-10">
+<h4 class="font-headline-sm text-headline-sm mb-4 text-on-primary">Preserve the Legacy</h4>
+<p class="font-body-md text-body-md text-on-primary/80 mb-6">Receive our quarterly dispatch on conservation progress and frontline impact reports directly from the heart of Uganda.</p>
+<form class="space-y-4">
+<div class="relative">
+<input class="w-full bg-white/10 border border-on-primary/20 py-3 px-4 font-label-caps text-label-caps text-on-primary focus:ring-1 focus:ring-secondary-fixed rounded-sm placeholder:text-on-primary/40" placeholder="Email Address" type="email">
+</div>
+<button class="w-full bg-secondary-fixed text-on-secondary-fixed py-3 font-label-caps text-label-caps hover:bg-white hover:text-primary transition-colors tracking-widest">SUBSCRIBE</button>
+</form>
+<p class="mt-4 font-label-caps text-[10px] text-on-primary/40 leading-tight">By subscribing, you agree to our Privacy Policy regarding the storage and management of your data.</p>
+</div>
+</div>
+<!-- Editor's Choice -->
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-secondary tracking-[0.2em] uppercase border-b border-outline-variant pb-2">Editor's Choice</h4>
+<div class="space-y-8">
+<a class="block group" href="blog.html">
+<span class="font-label-caps text-[10px] text-outline uppercase block mb-1">01 / Wildlife</span>
+<h5 class="font-headline-sm text-body-lg group-hover:text-secondary transition-colors">The Elephant Census: Surprising Growth in Queen Elizabeth Park</h5>
+</a>
+<a class="block group" href="blog.html">
+<span class="font-label-caps text-[10px] text-outline uppercase block mb-1">02 / Community</span>
+<h5 class="font-headline-sm text-body-lg group-hover:text-secondary transition-colors">Tactile Heritage: Traditional Bee-Keeping as a Defense Strategy</h5>
+</a>
+<a class="block group" href="blog.html">
+<span class="font-label-caps text-[10px] text-outline uppercase block mb-1">03 / Policy</span>
+<h5 class="font-headline-sm text-body-lg group-hover:text-secondary transition-colors">Carbon Credits: A Luxury Asset Class for Preservation</h5>
+</a>
+</div>
+</div>
+<!-- Impact Statistic Card -->
+<div class="relative aspect-square p-8 flex flex-col justify-end overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 group-hover:scale-110" data-alt="A close-up, high-detail macro shot of a young tree sapling breaking through rich, dark Ugandan soil, with dew drops clinging to its delicate green leaves. The lighting is crisp and clear, symbolizing new beginnings and professional care. The background is a soft-focus forest clearing, maintaining the serene and grounded atmosphere of the brand. Colors are vibrant and natural." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEiXBq02lFR05TwPk_xqMNYArLvW_2v9vIDj2lpqS9M98xOhvWmz_46y6ftjwlR1WiRRYAvGHtepVisms5Ym2MuFbHvebiXmslWkIHBJdB_Iujvi6SPqDR-EFsBmlYfglofWdNImWKinHkGQbGVyXrf7cbGafsXB7OH-BPgorjY4lqj_FMFdg9ra6IcSgmlOKWDPfY98ybeDIwt49ZrMG09msWXGL_qJK2jhedsb2yVqg-kbmqcxs')"></div>
+<div class="absolute inset-0 bg-primary/40 glass-effect"></div>
+<div class="relative z-10 text-on-primary">
+<span class="font-display-lg text-display-lg block leading-none">84%</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest">Increase in protected zones since 2018</span>
+<p class="mt-4 font-body-md text-body-md text-on-primary/70">Your contributions drive direct legislative and physical change in the field.</p>
+</div>
+</div>
+</aside>
+</section>
+<!-- Archive Exploration (Bento Style) -->
+<section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<h2 class="font-headline-md text-headline-md mb-12 border-b border-outline-variant/30 pb-4">The Archive</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-2 md:row-span-2 bg-surface-container-high p-8 flex flex-col justify-between group cursor-pointer hover:shadow-xl transition-all">
+<img class="w-full h-64 object-cover mb-8 rounded-sm grayscale hover:grayscale-0 transition-all duration-700" data-alt="A stunning wide-angle photograph of the Rwenzori Mountains, the 'Mountains of the Moon', with their snow-capped peaks rising above a layer of soft clouds. The foreground shows dense tropical forest in deep greens. The light is dramatic and high-contrast, captured in the early hours of dawn. This image embodies the serene and heroic landscape style of the publication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM4UIEBpzjZuCqUVLbUs7VNRFKU5XgYR9WHzmAF2C-GhYYrtdF68wdVDQGslBtU1WcCNSlEUHJmEIUdCp-GSfA44noE4D2-i4zFCSaO6-UmKgNeSAJAbAZI9Ijds4jNxmzW_aVdU5p2zTPiVDqfNgrjIm-FgaWDTmbZ-bFCJbZU8pXS-0-SFyHbYZHtJ6cS0YQlNkIbFw1KJItJzwFg8VrAeq55RHLY2mijPT35TTkBKqy1uYhvKM">
+<div>
+<span class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Long-form Series</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">The Rwenzori Protocol: Protecting the Mountains of the Moon</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A multi-part investigation into the vanishing glaciers and the indigenous tribes who guard the sacred peaks.</p>
+</div>
+</div>
+<div class="bg-white p-6 shadow-sm hover:-translate-y-1 transition-transform border-t-4 border-secondary transition-all duration-700 opacity-100 translate-y-0">
+<span class="font-label-caps text-[10px] text-outline mb-2 block">AUG 12</span>
+<h4 class="font-headline-sm text-body-lg mb-4">New Partnership with International Rhino Trust</h4>
+<a class="font-label-caps text-[11px] text-primary tracking-widest" href="blog.html">READ →</a>
+</div>
+<div class="bg-white p-6 shadow-sm hover:-translate-y-1 transition-transform border-t-4 border-primary transition-all duration-700 opacity-100 translate-y-0">
+<span class="font-label-caps text-[10px] text-outline mb-2 block">JUL 29</span>
+<h4 class="font-headline-sm text-body-lg mb-4">Sustainable Tourism: Defining Luxury in the Wild</h4>
+<a class="font-label-caps text-[11px] text-primary tracking-widest" href="blog.html">READ →</a>
+</div>
+<div class="bg-white p-6 shadow-sm hover:-translate-y-1 transition-transform border-t-4 border-tertiary-container transition-all duration-700 opacity-100 translate-y-0">
+<span class="font-label-caps text-[10px] text-outline mb-2 block">JUL 15</span>
+<h4 class="font-headline-sm text-body-lg mb-4">Bio-Corridors: Mapping the Future of Primate Travel</h4>
+<a class="font-label-caps text-[11px] text-primary tracking-widest" href="blog.html">READ →</a>
+</div>
+<div class="bg-white p-6 shadow-sm hover:-translate-y-1 transition-transform border-t-4 border-secondary-fixed transition-all duration-700 opacity-100 translate-y-0">
+<span class="font-label-caps text-[10px] text-outline mb-2 block">JUN 02</span>
+<h4 class="font-headline-sm text-body-lg mb-4">The Return of the Crested Crane: Habitat Recovery</h4>
+<a class="font-label-caps text-[11px] text-primary tracking-widest" href="blog.html">READ →</a>
+</div>
+</div>
+<div class="mt-12 text-center">
+<button class="px-12 py-4 border border-outline font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-colors tracking-widest">LOAD MORE DISPATCHES</button>
+</div>
+</section><section class="px-margin-mobile md:px-margin-desktop mb-section-gap">
+<div class="relative w-full min-h-[600px] bg-primary overflow-hidden flex flex-col items-center justify-center text-center p-8">
+<div class="absolute inset-0 opacity-40">
+<img alt="Forest background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCu3jPH5_KenGrtmgQxlw7qsTQZlrOy3c4GnNC8ssnVoo1hsdEAnyH63GcvL_hRvHSYfI9thnX4UnM-OWe75_1SEZfAq9rbfP0c0pNIAVScQ-7-iRKxXOOBcsRWUA5W3j92TT8PXWLyt7mmTxpoEoWLePVIejr0GCXRLe5-JKvTj-2iUdiwXHDcdUNlm29xSK1bO-o6L4b3YHuCHsG30uqeRkj-ll6ZuyyfyibY73ilzgPbjML7xn_8Po738XiNS85a">
+</div>
+<div class="relative z-10 max-w-4xl">
+<span class="font-label-caps text-label-caps text-secondary-fixed tracking-[0.3em] uppercase mb-8 block">Documentary Series</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-primary mb-12">PLANET UGANDA: THE FRONTIER</h2>
+<div class="grid grid-cols-3 gap-4 h-80 mb-12">
+<div class="overflow-hidden border border-on-primary/20">
+<img alt="Split 1" class="w-full h-full object-cover object-left hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2V0tcoUzTitBOxw8HRkPUa5pXJ-IpxKvS5n4O_dbI0qpN3k6egFirLAkPyrcAsYUIE0p9P73x0ldZbVbcqACV8w8OWKq5r0x9f7Pazlp29D59O2f4moQoJif4NprxzAK3RpJ5qyunHcWbOaptOFzeF8AwxL5aHPRmcFMt7SKYQcVbWyGmdaeFOoWRylHGN0KRkjbTGVebHsrgz6uqF_FnKhu6r00W4eX-CqvqZyGUQtLBcFSqEvN8_IwgGoFHielq">
+</div>
+<div class="overflow-hidden border border-on-primary/20">
+<img alt="Split 2" class="w-full h-full object-cover object-center hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuIePIKLk7G0KDJ31w-u42SDJQkm-4XckKaUztu-Wi82jqz4pusMFi0UlqGp0uRrtZ7QxVdJwsnKb2eMypJJSRob9GIYZbp1kRXXHrTJySSjKyD_FQxZAXEhmWPWBAK2FZ_3hLeg7kxPQYy8EPfRXYpUIkJMAF1cUpkUPY-rUbr8-oVZHdnHjNKOQUJyttAeyEleM_xKTrGIKMbQcbXMdf1JVsLY3sbKvbYp4O6GC7YD0YYiGAYoicZZI3_TMVzyhk">
+</div>
+<div class="overflow-hidden border border-on-primary/20">
+<img alt="Split 3" class="w-full h-full object-cover object-right hover:scale-110 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy6Da1W-xsqI7uHRhJS35G7ADcyM0ePXCEluF6qWPoYhVTNluKTB_6gqHr7ZdVcNwlyh_mIyOTmUTutJXiZfNA9rscJd2W-8tXEXvSm2mS5svktmvJQBzuCyFVuTEaxFC-ouYxbkR7R9WJaei85aLqIGZzUP7S85wZq5YPot9e9YcIjg1t0K9YoZV69QsOI_FBOKhPjbl3cLWlcRQ7xh4q0ILTBMyKYn2dbJHQe9BJ_0huldONQiMuKryZDIIjW_bY">
+</div>
+</div>
+<p class="font-body-lg text-on-primary/80 mb-8 max-w-2xl mx-auto">An immersive cinematic exploration of the protected zones where humanity and wildlife find a new equilibrium.</p>
+<button class="px-12 py-4 bg-secondary-fixed text-on-secondary-fixed font-label-caps text-label-caps hover:bg-white hover:text-primary transition-all tracking-widest uppercase">Watch the Trailer</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-primary dark:bg-tertiary">
+  <div class="space-y-8">
+    <h2 class="font-display-lg text-headline-md text-secondary-fixed">Friends of Planet Uganda</h2>
+    <p class="font-body-md text-body-md text-on-primary/60 max-w-sm">Preserving the heritage of the Pearl of Africa through prestigious partnerships and community-driven impact.</p>
+    <div class="flex gap-4">
+      <a class="w-10 h-10 border border-on-primary/20 flex items-center justify-center text-on-primary hover:bg-on-primary hover:text-primary transition-all" href="#">
+        <span class="material-symbols-outlined text-[20px]">public</span>
+      </a>
+      <a class="w-10 h-10 border border-on-primary/20 flex items-center justify-center text-on-primary hover:bg-on-primary hover:text-primary transition-all" href="#">
+        <span class="material-symbols-outlined text-[20px]">chat</span>
+      </a>
+      <a class="w-10 h-10 border border-on-primary/20 flex items-center justify-center text-on-primary hover:bg-on-primary hover:text-primary transition-all" href="#">
+        <span class="material-symbols-outlined text-[20px]">mail</span>
+      </a>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-8">
+    <div class="space-y-4">
+      <h5 class="font-label-caps text-label-caps text-on-primary uppercase tracking-widest">Organization</h5>
+      <nav class="flex flex-col space-y-2">
+        <a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="privacy.html">Privacy Policy</a>
+        <a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="terms.html">Terms of Service</a>
+        <a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="get_involved.html#corporate">Partnerships</a>
+        <a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="get_involved.html#impact">Impact Report</a>
+      </nav>
+    </div>
+    <div class="flex flex-col justify-between items-end">
+      <div class="text-right">
+        <h5 class="font-label-caps text-label-caps text-on-primary uppercase tracking-widest mb-4">Location</h5>
+        <p class="font-body-md text-on-primary/60">Plot 12 Forest View Rd<br>Kampala, Uganda</p>
+      </div>
+      <p class="font-body-md text-body-md text-on-primary/40 mt-8 text-right">© 2024 Friends of Planet Uganda. Preservation through Prestige.</p>
+    </div>
+  </div>
+</footer>
+
+
+<script src="js/main.js" defer></script>
+</body></html>
