@@ -3,15 +3,115 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>Our Work | Friends of Planet Uganda</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="js/tailwind-config.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;700;800&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#364c3c",
+                        "on-tertiary-container": "#839886",
+                        "tertiary": "#091a0f",
+                        "secondary": "#755a34",
+                        "on-primary-fixed": "#0b2013",
+                        "on-error": "#ffffff",
+                        "on-secondary-container": "#785c36",
+                        "tertiary-fixed": "#d3e8d5",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#b4cdb8",
+                        "tertiary-container": "#1d2f22",
+                        "secondary-fixed-dim": "#e5c192",
+                        "on-surface": "#1b1c19",
+                        "outline": "#737973",
+                        "surface-tint": "#4d6453",
+                        "surface-container": "#f0eee9",
+                        "on-primary": "#ffffff",
+                        "surface-container-high": "#eae8e3",
+                        "surface-dim": "#dbdad5",
+                        "on-secondary": "#ffffff",
+                        "primary-container": "#1b3022",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#b7ccb9",
+                        "on-secondary-fixed": "#291800",
+                        "on-tertiary": "#ffffff",
+                        "inverse-surface": "#30312e",
+                        "on-background": "#1b1c19",
+                        "on-tertiary-fixed-variant": "#394b3d",
+                        "primary": "#061b0e",
+                        "inverse-on-surface": "#f2f1ec",
+                        "outline-variant": "#c3c8c1",
+                        "secondary-fixed": "#ffddb3",
+                        "surface-variant": "#e4e2dd",
+                        "on-primary-container": "#819986",
+                        "on-secondary-fixed-variant": "#5b421f",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-surface-variant": "#434843",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#b4cdb8",
+                        "background": "#fbf9f4",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#d0e9d4",
+                        "surface-bright": "#fbf9f4",
+                        "on-tertiary-fixed": "#0e1f13",
+                        "surface-container-low": "#f5f3ee",
+                        "secondary-container": "#fdd7a7",
+                        "surface": "#fbf9f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "margin-desktop": "64px",
+                        "section-gap": "120px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "display-lg": ["Libre Caslon Text"],
+                        "headline-md": ["Libre Caslon Text"],
+                        "display-lg-mobile": ["Libre Caslon Text"],
+                        "body-md": ["Manrope"],
+                        "headline-sm": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(6, 27, 14, 0.4), rgba(6, 27, 14, 0.8));
+        }
+    </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
 <!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-primary/80 dark:bg-primary/90 backdrop-blur-md shadow-sm border-b border-outline-variant/10"><a class="font-display-lg-mobile text-headline-sm text-on-primary dark:text-primary-fixed font-normal tracking-tight" href="index.html">Friends of Planet Uganda</a><div class="hidden md:flex gap-8 items-center"><a class="font-label-caps text-label-caps text-on-primary border-b-2 border-secondary-fixed transition-opacity" href="our_work.html">Our Work</a><a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="about_us.html">About Us</a><a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="get_involved.html">Get Involved</a><a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="blog.html">Blog</a></div><div class="flex items-center gap-4"><button class="hidden sm:block font-label-caps text-label-caps px-6 py-2 border border-on-primary/30 text-on-primary hover:bg-on-primary/10 transition-all rounded-lg">Volunteer</button><button class="font-label-caps text-label-caps px-6 py-2 bg-secondary-fixed text-on-secondary-fixed hover:opacity-90 transition-all active:scale-95 duration-150 rounded-lg">Donate</button></div></nav>
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-primary/80 dark:bg-primary/90 backdrop-blur-md shadow-sm border-b border-outline-variant/10"><a class="font-display-lg-mobile text-headline-sm text-on-primary dark:text-primary-fixed font-normal tracking-tight" href="#">Friends of Planet Uganda</a><div class="hidden md:flex gap-8 items-center"><a class="font-label-caps text-label-caps text-on-primary border-b-2 border-secondary-fixed transition-opacity" href="#">Our Work</a><a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="#">About Us</a><a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="#">Get Involved</a><a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary transition-opacity" href="#">Blog</a></div><div class="flex items-center gap-4"><button class="hidden sm:block font-label-caps text-label-caps px-6 py-2 border border-on-primary/30 text-on-primary hover:bg-on-primary/10 transition-all rounded-lg">Volunteer</button><button class="font-label-caps text-label-caps px-6 py-2 bg-secondary-fixed text-on-secondary-fixed hover:opacity-90 transition-all active:scale-95 duration-150 rounded-lg">Donate</button></div></nav>
 <main>
 <!-- Hero Section -->
 <section class="relative h-[819px] flex items-center justify-center overflow-hidden">
@@ -106,7 +206,7 @@
                     </p>
 <blockquote class="border-l-4 border-secondary-fixed pl-6 py-2 mb-8 italic text-on-surface font-body-lg">
                         "When we protect the forest, the forest protects our harvest. It's a new era for our village."
-                        <footer class="not-italic font-label-caps text-label-caps mt-4 text-on-surface-variant"><div class="flex flex-col gap-8"><h2 class="font-display-lg text-headline-md text-secondary-fixed">Friends of Planet Uganda</h2><p class="font-body-md text-on-primary/60 max-w-md">Dedicated to the preservation of Uganda's natural heritage through prestigious international partnerships and local community excellence.</p><div class="flex gap-6"><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">public</a><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">eco</a><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">volunteer_activism</a></div></div><div class="grid grid-cols-2 gap-8"><div class="flex flex-col gap-4"><h4 class="font-label-caps text-label-caps text-on-primary/40">EXPLORE</h4><nav class="flex flex-col gap-2"><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="get_involved.html#impact">Impact Report</a><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="get_involved.html#corporate">Partnerships</a></nav></div><div class="flex flex-col gap-4"><h4 class="font-label-caps text-label-caps text-on-primary/40">LEGAL</h4><nav class="flex flex-col gap-2"><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="privacy.html">Privacy Policy</a><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="terms.html">Terms of Service</a></nav></div></div><div class="col-span-full pt-12 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-4"><p class="font-body-md text-body-md text-on-primary/60">© 2024 Friends of Planet Uganda. Preservation through Prestige.</p><p class="font-label-caps text-[10px] text-on-primary/40 tracking-widest uppercase">Kampala • London • Washington D.C.</p></div></footer>
+                        <footer class="not-italic font-label-caps text-label-caps mt-4 text-on-surface-variant"><div class="flex flex-col gap-8"><h2 class="font-display-lg text-headline-md text-secondary-fixed">Friends of Planet Uganda</h2><p class="font-body-md text-on-primary/60 max-w-md">Dedicated to the preservation of Uganda's natural heritage through prestigious international partnerships and local community excellence.</p><div class="flex gap-6"><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">public</a><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">eco</a><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">volunteer_activism</a></div></div><div class="grid grid-cols-2 gap-8"><div class="flex flex-col gap-4"><h4 class="font-label-caps text-label-caps text-on-primary/40">EXPLORE</h4><nav class="flex flex-col gap-2"><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="#">Impact Report</a><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="#">Partnerships</a></nav></div><div class="flex flex-col gap-4"><h4 class="font-label-caps text-label-caps text-on-primary/40">LEGAL</h4><nav class="flex flex-col gap-2"><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="#">Privacy Policy</a><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="#">Terms of Service</a></nav></div></div><div class="col-span-full pt-12 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-4"><p class="font-body-md text-body-md text-on-primary/60">© 2024 Friends of Planet Uganda. Preservation through Prestige.</p><p class="font-label-caps text-[10px] text-on-primary/40 tracking-widest uppercase">Kampala • London • Washington D.C.</p></div></footer>
 </blockquote>
 <a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:opacity-70 transition-all" href="#">
                         Our Community Programs
@@ -133,8 +233,39 @@
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-primary dark:bg-tertiary"><div class="flex flex-col gap-8"><h2 class="font-display-lg text-headline-md text-secondary-fixed">Friends of Planet Uganda</h2><p class="font-body-md text-on-primary/60 max-w-md">Dedicated to the preservation of Uganda's natural heritage through prestigious international partnerships and local community excellence.</p><div class="flex gap-6"><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">public</a><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">eco</a><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">volunteer_activism</a></div></div><div class="grid grid-cols-2 gap-8"><div class="flex flex-col gap-4"><h4 class="font-label-caps text-label-caps text-on-primary/40">EXPLORE</h4><nav class="flex flex-col gap-2"><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="get_involved.html#impact">Impact Report</a><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="get_involved.html#corporate">Partnerships</a></nav></div><div class="flex flex-col gap-4"><h4 class="font-label-caps text-label-caps text-on-primary/40">LEGAL</h4><nav class="flex flex-col gap-2"><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="privacy.html">Privacy Policy</a><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="terms.html">Terms of Service</a></nav></div></div><div class="col-span-full pt-12 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-4"><p class="font-body-md text-body-md text-on-primary/60">© 2024 Friends of Planet Uganda. Preservation through Prestige.</p><p class="font-label-caps text-[10px] text-on-primary/40 tracking-widest uppercase">Kampala • London • Washington D.C.</p></div></footer>
+<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-primary dark:bg-tertiary"><div class="flex flex-col gap-8"><h2 class="font-display-lg text-headline-md text-secondary-fixed">Friends of Planet Uganda</h2><p class="font-body-md text-on-primary/60 max-w-md">Dedicated to the preservation of Uganda's natural heritage through prestigious international partnerships and local community excellence.</p><div class="flex gap-6"><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">public</a><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">eco</a><a class="material-symbols-outlined text-on-primary hover:text-secondary-fixed transition-colors" href="#">volunteer_activism</a></div></div><div class="grid grid-cols-2 gap-8"><div class="flex flex-col gap-4"><h4 class="font-label-caps text-label-caps text-on-primary/40">EXPLORE</h4><nav class="flex flex-col gap-2"><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="#">Impact Report</a><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="#">Partnerships</a></nav></div><div class="flex flex-col gap-4"><h4 class="font-label-caps text-label-caps text-on-primary/40">LEGAL</h4><nav class="flex flex-col gap-2"><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="#">Privacy Policy</a><a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary transition-all" href="#">Terms of Service</a></nav></div></div><div class="col-span-full pt-12 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-4"><p class="font-body-md text-body-md text-on-primary/60">© 2024 Friends of Planet Uganda. Preservation through Prestige.</p><p class="font-label-caps text-[10px] text-on-primary/40 tracking-widest uppercase">Kampala • London • Washington D.C.</p></div></footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Top nav scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-primary/95');
+                nav.classList.remove('py-4', 'bg-primary/80');
+            } else {
+                nav.classList.add('py-4', 'bg-primary/80');
+                nav.classList.remove('py-2', 'bg-primary/95');
+            }
+        });
+    </script>
 
 
-<script src="js/main.js" defer></script>
 </body></html>
