@@ -5,21 +5,134 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Get Involved | Friends of Planet Uganda</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="js/tailwind-config.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&amp;family=Manrope:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="css/styles.css">
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary-fixed-variant": "#364c3c",
+            "on-tertiary-container": "#839886",
+            "tertiary": "#091a0f",
+            "secondary": "#755a34",
+            "on-primary-fixed": "#0b2013",
+            "on-error": "#ffffff",
+            "on-secondary-container": "#785c36",
+            "tertiary-fixed": "#d3e8d5",
+            "error-container": "#ffdad6",
+            "inverse-primary": "#b4cdb8",
+            "tertiary-container": "#1d2f22",
+            "secondary-fixed-dim": "#e5c192",
+            "on-surface": "#1b1c19",
+            "outline": "#737973",
+            "surface-tint": "#4d6453",
+            "surface-container": "#f0eee9",
+            "on-primary": "#ffffff",
+            "surface-container-high": "#eae8e3",
+            "surface-dim": "#dbdad5",
+            "on-secondary": "#ffffff",
+            "primary-container": "#1b3022",
+            "error": "#ba1a1a",
+            "tertiary-fixed-dim": "#b7ccb9",
+            "on-secondary-fixed": "#291800",
+            "on-tertiary": "#ffffff",
+            "inverse-surface": "#30312e",
+            "on-background": "#1b1c19",
+            "on-tertiary-fixed-variant": "#394b3d",
+            "primary": "#061b0e",
+            "inverse-on-surface": "#f2f1ec",
+            "outline-variant": "#c3c8c1",
+            "secondary-fixed": "#ffddb3",
+            "surface-variant": "#e4e2dd",
+            "on-primary-container": "#819986",
+            "on-secondary-fixed-variant": "#5b421f",
+            "surface-container-highest": "#e4e2dd",
+            "on-surface-variant": "#434843",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#b4cdb8",
+            "background": "#fbf9f4",
+            "surface-container-lowest": "#ffffff",
+            "primary-fixed": "#d0e9d4",
+            "surface-bright": "#fbf9f4",
+            "on-tertiary-fixed": "#0e1f13",
+            "surface-container-low": "#f5f3ee",
+            "secondary-container": "#fdd7a7",
+            "surface": "#fbf9f4"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "base": "8px",
+            "margin-mobile": "20px",
+            "container-max": "1280px",
+            "margin-desktop": "64px",
+            "section-gap": "120px",
+            "gutter": "24px"
+          },
+          "fontFamily": {
+            "label-caps": ["Manrope"],
+            "body-lg": ["Manrope"],
+            "display-lg": ["Libre Caslon Text"],
+            "headline-md": ["Libre Caslon Text"],
+            "display-lg-mobile": ["Libre Caslon Text"],
+            "body-md": ["Manrope"],
+            "headline-sm": ["Libre Caslon Text"]
+          },
+          "fontSize": {
+            "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+            "display-lg": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+            "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "400" }],
+            "display-lg-mobile": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+            "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+            "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "400" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .glass-effect {
+      backdrop-filter: blur(12px);
+      background-color: rgba(6, 27, 14, 0.8);
+    }
+    .hero-mask {
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+    }
+    .editorial-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 24px;
+    }
+    .card-shadow {
+      box-shadow: 0 10px 40px -10px rgba(27, 48, 34, 0.05);
+    }
+    .text-balance {
+      text-wrap: balance;
+    }
+  </style>
 </head>
 <body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
 <!-- Navigation Shell (TopAppBar) -->
 <nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-primary/80 dark:bg-primary/90 backdrop-blur-md border-b border-outline-variant/10 shadow-sm">
-<a class="font-display-lg-mobile text-headline-sm text-on-primary dark:text-primary-fixed font-normal tracking-tight" href="index.html">Friends of Planet Uganda</a>
+<div class="font-display-lg-mobile text-headline-sm text-on-primary dark:text-primary-fixed font-normal tracking-tight">
+      Friends of Planet Uganda
+    </div>
 <div class="hidden md:flex space-x-8 items-center">
-<a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary hover:opacity-80 transition-opacity" href="our_work.html">Our Work</a>
-<a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary hover:opacity-80 transition-opacity" href="about_us.html">About Us</a>
-<a class="font-label-caps text-label-caps text-on-primary border-b-2 border-secondary-fixed hover:opacity-80 transition-opacity" href="get_involved.html">Get Involved</a>
-<a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary hover:opacity-80 transition-opacity" href="blog.html">Blog</a>
+<a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary hover:opacity-80 transition-opacity" href="#">Our Work</a>
+<a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary hover:opacity-80 transition-opacity" href="#">About Us</a>
+<a class="font-label-caps text-label-caps text-on-primary border-b-2 border-secondary-fixed hover:opacity-80 transition-opacity" href="#">Get Involved</a>
+<a class="font-label-caps text-label-caps text-on-primary/70 hover:text-on-primary hover:opacity-80 transition-opacity" href="#">Blog</a>
 <div class="flex space-x-4 ml-4">
 <button class="bg-secondary-fixed text-on-secondary-fixed px-6 py-2 font-label-caps text-label-caps transition-all active:scale-95 duration-150">Volunteer</button>
 <button class="bg-on-primary text-primary px-6 py-2 font-label-caps text-label-caps transition-all active:scale-95 duration-150">Donate</button>
@@ -93,7 +206,7 @@
 <section class="section-gap" id="volunteer">
 <div class="grid grid-cols-1 lg:grid-cols-2 gap-section-gap">
 <div class="order-2 lg:order-1 relative h-[600px]">
-<img class="w-full h-full object-cover" data-alt="A portrait of a group of Ugandan community leaders and conservationists standing together in a lush savanna setting, laughing and sharing a moment of success. The lighting is natural and heroic, emphasizing their dignity and active role in preservation efforts, with deep greens and warm sun-kissed highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABVMq0-NiLM6jz9h6myt9e1XAcMeVuVezY_jcgxmZRVdHucAAOODO-ZagRM_yvqs5wotq-QES-vWK5nLsUYykes0-K_tfV9DlOFg_ki-KPXIXe3R87xmmUcnuS-jk1tMfduiD3XzeQsLHv4ZKexVto2fmWL0EFF9hdYxspAmVwsdwGBf2x0L4v15WYUSSRdtInXXdnQWnqisHoiUcqb8sp8zHMVRY7dpLZWiAK7JtXThdczVgUsQo"/>
+<img class="w-full h-full object-cover" data-alt="A portrait of a group of Ugandan community leaders and conservationists standing together in a lush savanna setting, laughing and sharing a moment of success. The lighting is natural and heroic, emphasizing their dignity and active role in preservation efforts, with deep greens and warm sun-kissed highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAl6r80ufZHwO6kdF1LvRFBhsSWoDteIHncIRvVXEv1owplaacM8AvJ9hV4SLAkSO03BZctyB_X39Tku7WYLDyhgIBN4CIcrFYrwj7LlzhZ_5w9ee1poqIJkcwWn9vdPz7mEikcpZ0CF3KBsO4DQqjOpM4dN58dFbjLrUPx4lv3oQUy_Xq0GUFaVW0OWCCdX9WgSAQHKfkOqJkzHL20zpVdHY4qkM_nVIHZ-K8lkwJbDtH_iun0agMkALgtSWhRxRt9"/>
 <div class="absolute -bottom-8 -right-8 bg-surface-container-high p-8 max-w-xs hidden md:block">
 <p class="font-headline-sm text-headline-sm text-primary mb-2">Field Programs</p>
 <p class="font-body-md text-body-md text-on-surface-variant">Join our reforestation teams on the ground in the Bwindi regions this Summer.</p>
@@ -137,7 +250,6 @@
 <!-- Corporate Partnerships Section -->
 <section class="section-gap" id="corporate">
 <div class="bg-primary py-24 px-8 md:px-24 text-center space-y-12 relative overflow-hidden">
-
 <div class="relative z-10">
 <span class="font-label-caps text-label-caps text-secondary-fixed mb-4 block">SUSTAINABLE SYNERGY</span>
 <h2 class="font-headline-md text-display-lg-mobile md:text-headline-md text-on-primary text-balance mx-auto max-w-3xl">Strategic Partnerships for Global Impact</h2>
@@ -173,7 +285,7 @@
 <h2 class="font-headline-md text-headline-md text-primary">Radical Transparency</h2>
 <p class="font-body-md text-body-md text-on-surface-variant">We believe that impact should be measured in more than just dollars. Explore our annual audits and detailed conservation reports.</p>
 </div>
-<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 flex items-center gap-2 hover:opacity-70 transition-opacity" href="blog.html">
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 flex items-center gap-2 hover:opacity-70 transition-opacity" href="#">
             VIEW ALL ARCHIVES <span class="material-symbols-outlined text-sm">arrow_forward</span>
 </a>
 </div>
@@ -219,7 +331,7 @@
 </div>
 </main>
 <!-- Footer Shell -->
-<footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-primary dark:bg-tertiary">
+<section class="section-gap bg-surface-container-low py-24" id="impact-focus"><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16"><span class="font-label-caps text-label-caps text-secondary mb-4 block">VISUAL EVIDENCE</span><h2 class="font-headline-md text-headline-md text-primary">Our Impact in Focus</h2><p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mt-4">Witness the tangible transformation of the landscapes we protect through cinematic documentation of our field sites.</p></div><div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"><div class="grid grid-cols-3 gap-4 h-[600px] md:h-[800px]"><div class="relative overflow-hidden group"><img alt="Conservation site 1" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxuSOd7cRVK9VkAvZ0avOtgcY3am8tQnVaEhgwPqM2B4nn0ZLqNO7egxxU9Q1QA3lEeUcrSVLeAp2nh3Sp05x931jlcvWr4jYwWAPdItLY8wHD6YkfnYAlO71eyHTIx2j2Hl_QmfxlePREtbFR8ZItHwghGZPGZyUz9E7BiMT4MlDeAvm3L3hVOoBmrltX_jElhOIpLeiVhoVzPDVkxG2qo5JdjMXlRaRg_DRCr1J5-a4It0sQNewZLhBODNs0wBQd"/><div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all"></div></div><div class="relative overflow-hidden group -mt-12 md:-mt-24 mb-12 md:mb-24"><img alt="Conservation site 2" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPUH_kNktcqGSJD58x6TIiqZAlWL8RSSn3pkbdbRhVF-AN61vQfgbRJvWjNIuM-kDhCGXy0_8UByeVb_wjiV5q6idbivMpsDZ1y4kLSOtQAidX1oZsCEfgWzQgEH3AEK2xtShcVslB64tLG0jVAtNBgUuL5taymKmSFHOBH_tPoxKPrP5Z-jV5udd9Fg6QFGGFE46q6Z-dHdc1_YEk4w5v40fbsm3PokeGZ8LlmGIhwriyw9TsbYAO2fosRjm0fU3s"/><div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all"></div></div><div class="relative overflow-hidden group"><img alt="Conservation site 3" class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpWdBHRwibZ9mW4sDgePgjDSvlAb8Nlw96N5Ko1DaxOwcg-rNvZjCpHaUryOFYUkDi9oNSqUvuvNPHXbRP-hJZEobmhXYqKhO_msWpXKHAOqW78x3irj89ZH80MImMJ5ynlQI7qVtzoqjE9FF1zFYbJwKkqC2RPo7RW518Bpk4DFABhc0lAEQrrixAes1sJgCRDkAna0HBf7CYUppVhWZTRa_iDkxk4L08EcVLj16u02rRzS6FI3ZINEFdZ_nPsd-D"/><div class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all"></div></div></div></div></section><footer class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-primary dark:bg-tertiary">
 <div class="space-y-8">
 <div class="font-display-lg text-headline-md text-secondary-fixed">Friends of Planet Uganda</div>
 <p class="font-body-md text-body-md text-on-primary/60 max-w-md">Dedicated to the lasting preservation of Uganda's wildlife through strategic action and community-focused leadership.</p>
@@ -234,15 +346,42 @@
 </div>
 <div class="flex flex-col justify-between items-end">
 <div class="flex flex-wrap gap-8 justify-end">
-<a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="privacy.html">Privacy Policy</a>
-<a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="terms.html">Terms of Service</a>
-<a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="get_involved.html#corporate">Partnerships</a>
-<a class="font-label-caps text-label-caps text-secondary-fixed hover:underline transition-all" href="get_involved.html#impact">Impact Report</a>
+<a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-primary/60 hover:text-on-primary hover:underline transition-all" href="#">Partnerships</a>
+<a class="font-label-caps text-label-caps text-secondary-fixed hover:underline transition-all" href="#">Impact Report</a>
 </div>
 <div class="text-right mt-12 md:mt-0">
 <p class="text-on-primary/40 font-body-md text-[14px]">© 2024 Friends of Planet Uganda. Preservation through Prestige.</p>
 </div>
 </div>
 </footer>
-<script src="js/main.js" defer></script>
+<script>
+    // Simple micro-interaction for donation buttons
+    document.querySelectorAll('.donation-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.donation-btn').forEach(b => {
+          b.classList.remove('bg-primary', 'text-on-primary');
+          b.classList.add('text-primary', 'border-outline');
+        });
+        this.classList.add('bg-primary', 'text-on-primary');
+        this.classList.remove('text-primary', 'border-outline');
+      });
+    });
+
+    // Intersection Observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+      observer.observe(section);
+    });
+  </script>
 </body></html>
