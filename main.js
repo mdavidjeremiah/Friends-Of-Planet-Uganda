@@ -21,6 +21,178 @@ document.addEventListener('DOMContentLoaded', () => {
     { match: t => t === 'READ LATEST IMPACT REPORT', go: 'get_involved.html#impact' },
   ];
 
+  function getRouteForLabel(label) {
+    const route = ROUTES.find(r => r.match(label));
+    return route ? route.go : null;
+  }
+
+  function setMenuIcon(button, iconName) {
+    const icon = button.querySelector('.material-symbols-outlined');
+    if (icon) {
+      icon.textContent = iconName;
+    }
+  }
+
+  function createMobileLink(label, href, isPrimary = false) {
+    const link = document.createElement('a');
+    link.href = href;
+    link.textContent = label;
+    link.className = isPrimary
+      ? 'w-full text-center font-label-caps text-label-caps px-6 py-4 bg-secondary-fixed text-on-secondary-fixed hover:opacity-80 transition-all duration-150 active:scale-95'
+      : 'font-display-lg-mobile text-headline-md text-center text-on-primary hover:text-secondary-fixed transition-colors';
+    return link;
+  }
+
+  function createMobileMenu(menuButton) {
+    const rootNav = menuButton.closest('nav') || menuButton.closest('header')?.querySelector('nav') || document.querySelector('nav');
+    const desktopMenu = rootNav ? rootNav.querySelector('.hidden.md\\:flex, .hidden.sm\\:flex') : null;
+    const existingOverlay = document.getElementById('mobile-nav-overlay');
+    const closeOnDesktop = () => {
+      if (window.innerWidth >= 768) {
+        setMenuOpen(false);
+      }
+    };
+    let isOpen = false;
+    let overlay = existingOverlay;
+
+    function setMenuOpen(nextOpen) {
+      isOpen = nextOpen;
+      menuButton.setAttribute('aria-expanded', String(nextOpen));
+      setMenuIcon(menuButton, nextOpen ? 'close' : 'menu');
+      document.body.classList.toggle('overflow-hidden', nextOpen);
+
+      if (!overlay) {
+        return;
+      }
+
+      overlay.classList.toggle('translate-x-full', !nextOpen);
+      overlay.classList.toggle('translate-x-0', nextOpen);
+      overlay.classList.toggle('pointer-events-none', !nextOpen);
+      overlay.classList.toggle('pointer-events-auto', nextOpen);
+      overlay.setAttribute('aria-hidden', String(!nextOpen));
+    }
+
+    if (overlay) {
+      overlay.classList.add('pointer-events-none');
+      overlay.setAttribute('aria-hidden', 'true');
+
+      const closeButton = overlay.querySelector('#close-menu');
+
+      menuButton.setAttribute('aria-controls', 'mobile-nav-overlay');
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        setMenuOpen(!isOpen);
+      });
+
+      if (closeButton) {
+        closeButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          setMenuOpen(false);
+        });
+      }
+
+      overlay.addEventListener('click', (event) => {
+        if (event.target === overlay) {
+          setMenuOpen(false);
+        }
+      });
+
+      overlay.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenuOpen(false)));
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+          setMenuOpen(false);
+        }
+      });
+      window.addEventListener('resize', closeOnDesktop);
+      return;
+    }
+
+    if (!desktopMenu) {
+      return;
+    }
+
+    overlay = document.createElement('div');
+    overlay.id = 'mobile-nav-overlay';
+    overlay.className = 'fixed inset-0 z-[60] flex flex-col overflow-y-auto bg-primary text-on-primary translate-x-full pointer-events-none transition-transform duration-300 ease-out';
+    overlay.setAttribute('aria-hidden', 'true');
+
+    const panel = document.createElement('div');
+    panel.className = 'relative flex min-h-full w-full flex-col items-center justify-center gap-10 px-margin-mobile py-20';
+
+    const closeButton = document.createElement('button');
+    closeButton.type = 'button';
+    closeButton.id = 'close-menu';
+    closeButton.className = 'absolute right-margin-mobile top-4 p-2';
+    closeButton.innerHTML = '<span class="material-symbols-outlined text-4xl">close</span>';
+    closeButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      setMenuOpen(false);
+    });
+
+    const mobileNav = document.createElement('nav');
+    mobileNav.className = 'flex flex-col items-center gap-8';
+
+    Array.from(desktopMenu.querySelectorAll('a')).forEach(link => {
+      mobileNav.appendChild(createMobileLink(link.textContent.trim(), link.getAttribute('href') || '#'));
+    });
+
+    const quickActions = Array.from(rootNav.querySelectorAll('a, button'))
+      .filter(element => element !== menuButton && !desktopMenu.contains(element) && element.textContent.trim() !== 'Friends of Planet Uganda');
+
+    if (quickActions.length) {
+      const actionWrap = document.createElement('div');
+      actionWrap.className = 'flex w-full flex-col gap-4 pt-4 max-w-sm';
+
+      quickActions.forEach(element => {
+        const label = element.textContent.trim();
+        if (!label) {
+          return;
+        }
+
+        const href = element.tagName === 'A'
+          ? element.getAttribute('href')
+          : getRouteForLabel(label);
+
+        if (!href) {
+          return;
+        }
+
+        actionWrap.appendChild(createMobileLink(label, href, true));
+      });
+
+      if (actionWrap.children.length) {
+        panel.appendChild(actionWrap);
+      }
+    }
+
+    panel.appendChild(closeButton);
+    panel.appendChild(mobileNav);
+    overlay.appendChild(panel);
+    document.body.appendChild(overlay);
+
+    menuButton.setAttribute('aria-controls', 'mobile-nav-overlay');
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      setMenuOpen(!isOpen);
+    });
+
+    overlay.addEventListener('click', (event) => {
+      if (event.target === overlay) {
+        setMenuOpen(false);
+      }
+    });
+
+    overlay.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenuOpen(false)));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') {
+        setMenuOpen(false);
+      }
+    });
+    window.addEventListener('resize', closeOnDesktop);
+  }
+
   document.querySelectorAll('button').forEach(btn => {
     const label = btn.textContent.trim();
     const route = ROUTES.find(r => r.match(label));
@@ -30,27 +202,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  /* ---------- Mobile menu fallback ----------
-     Toggles the existing desktop link list (hidden on small screens)
-     open/closed when the hamburger icon is tapped, on any page that
-     doesn't already wire up its own menu (blog_2.html has its own). */
-  const hamburger = document.querySelector('button.md\\:hidden, button.sm\\:hidden');
-  if (hamburger && !document.getElementById('mobile-menu-trigger')) {
-    const nav = document.querySelector('nav .hidden.md\\:flex, header .hidden.md\\:flex, .hidden.md\\:flex');
-    if (nav) {
-      hamburger.addEventListener('click', () => {
-        nav.classList.toggle('hidden');
-        nav.classList.toggle('flex');
-        nav.classList.toggle('flex-col');
-        nav.classList.toggle('absolute');
-        nav.classList.toggle('top-full');
-        nav.classList.toggle('left-0');
-        nav.classList.toggle('w-full');
-        nav.classList.toggle('bg-primary');
-        nav.classList.toggle('p-6');
-        nav.classList.toggle('gap-4');
-      });
-    }
+  /* ---------- Mobile menu ----------
+     Upgrades the smaller-screen navigation into a drawer, using the
+     existing overlay where present and building one from the shared
+     desktop nav where needed. */
+  const hamburger = document.querySelector('#mobile-menu-trigger, button.md\\:hidden, button.sm\\:hidden');
+  if (hamburger) {
+    createMobileMenu(hamburger);
   }
 
   /* ---------- Donation widget (get_involved.html) ---------- */
